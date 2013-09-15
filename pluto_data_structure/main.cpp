@@ -26,7 +26,7 @@ public:
     
     bool solar_system;
     
-    //size
+    //sizes formulas
     float radius(){ //meters
         return 1.15*pow(10,6);
     };
@@ -40,22 +40,19 @@ public:
         return (6.67384 * pow(10,-11))*mass()/(radius()*radius());
     };
     
+    //global temp and distance variables
+    float current_distance;
+    float current_temp;
+    
+    //min max distance from sun
+    float closest=4.44*pow(10,9);
+    float farthest=7.38*pow(10,9);
+    
+    //linear interpolation function
     float lmap(float val, float inMin, float inMax, float outMin, float outMax)
     {
         return outMin + (outMax - outMin) * ((val - inMin) / (inMax - inMin));
     };
-    
-    //global temp and distance
-    float current_distance;
-    float current_temp;
-    
-    //min max distance
-    float closest=4.44*pow(10,9);
-    float farthest=7.38*pow(10,9);
-    
-    //material percentages
-    float rock=.65;
-    float ice=.35;
     
     //constructor
     Pluto();
@@ -170,6 +167,10 @@ void Pluto::atmosphere(){
 
 /////////////////////////////////////
 void Pluto::materials(){
+    //material percentages
+    float rock=.65;
+    float ice=.35;
+    
     cout<<endl<<endl<<endl<<"MATERIALS////////////"<<endl;
     
     cout<<endl<<"pluto is made of about "<<rock*100<<"% rock and "<<ice*100<<"% ice."<<endl;
