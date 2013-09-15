@@ -13,9 +13,8 @@ using namespace std;
 
 /////////////////////////////////////
 //class
-class Pluto
+struct Pluto
 {
-public:
     void formation();
     void clear_neighborhood_become_planet();
     void orbit();
