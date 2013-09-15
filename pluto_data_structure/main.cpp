@@ -68,17 +68,19 @@ public:
 
 
 void Pluto::formation(){
-    bool waves_of_energy;
-    bool clouds_of_dust_and_gas;
-    bool gravity;
-    bool protoplanetary_disk;
-    bool proto_star;
+    bool star_death=true;
+    bool waves_of_energy=false;
+    bool clouds_of_dust_and_gas=false;
+    bool gravity=false;
+    bool protoplanetary_disk=false;
+    bool proto_star=false;
     
     cout<<"FORMATION////////////"<<endl;
     
-    
-    waves_of_energy=true;
-    clouds_of_dust_and_gas=true;
+    if (star_death) {
+        waves_of_energy=true;
+        clouds_of_dust_and_gas=true;
+    }
     
     if (clouds_of_dust_and_gas && waves_of_energy){
         cout<<endl<<"waves of energy flowing through the universe press together clouds of dust and gas"<<endl;
@@ -129,7 +131,7 @@ void Pluto::orbit(){
         int pluto_year=248;
         cout<<endl<<"1 pluto year is equal to "<<pluto_year<<" earth years"<<endl;
         //seed for psuedo random earth year
-        srand(time(NULL));
+        srand(unsigned(time(NULL)));
         int earth_year_divisions=rand() % 249;
         if (earth_year_divisions<125) {
             current_distance=lmap(earth_year_divisions, 0, 124, farthest, closest);
