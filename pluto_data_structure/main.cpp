@@ -17,13 +17,12 @@ class Pluto
 {
 public:
     void formation();
-    void sweep_neighborhood_become_planet();
+    void clear_neighborhood_become_planet();
     void orbit();
     void temperature();
     void atmosphere();
     void materials();
     void ocean();
-    
     
     bool solar_system;
     
@@ -54,10 +53,9 @@ public:
     float closest=4.44*pow(10,9);
     float farthest=7.38*pow(10,9);
     
-    //materials
+    //material percentages
     float rock=.65;
     float ice=.35;
-    enum {methane, nitrogen, carbon_monoxide, water};
     
     //constructor
     Pluto();
@@ -110,8 +108,8 @@ void Pluto::formation(){
 }
 
 /////////////////////////////////////
-void Pluto::sweep_neighborhood_become_planet(){
-    cout<<endl<<endl<<endl<<"ATTEMPTING TO SWEEP NEIGHBORHOOD CLEAN AND BECOME A PLANET///////////////"<<endl;
+void Pluto::clear_neighborhood_become_planet(){
+    cout<<endl<<endl<<endl<<"ATTEMPTING TO CLEAR NEIGHBORHOOD AND BECOME A PLANET///////////////"<<endl;
     if (solar_system) {
         if (gravity()>1.f)
             cout<<endl<<"yes, got mass, got gravity... got PLANET"<<endl;
@@ -189,9 +187,9 @@ void Pluto::ocean(){
     srand(unsigned(time(NULL)));
     float potassium = rand()%10;
     if (potassium>6)
-        cout<<endl<<"potassium is radioactive, the heat from the radioactive decay has melted the water below the surface and created a vast subterranean ocean!"<<endl;
+        cout<<endl<<"potassium is radioactive, the heat from the radioactive decay has melted the water below the surface and created a vast subterranean OCEAN!"<<endl;
     else
-        cout<<endl<<"potassium is radioactive, it could melt the water below the surface if there is enough of it."<<endl;
+        cout<<endl<<"potassium is radioactive, it could melt the water below the surface if there is enough of it. but there's no ocean right now, just ICE!"<<endl;
     
     cout<<endl<<"********************"<<endl;
 }
