@@ -10,11 +10,10 @@
 #include <math.h>
 #include <iomanip>
 
-
 using namespace std;
 
-
-
+/////////////////////////////////////
+//class
 class Pluto
 {
 public:
@@ -66,7 +65,7 @@ public:
     
 };
 
-
+/////////////////////////////////////
 void Pluto::formation(){
     bool star_death=true;
     bool waves_of_energy=false;
@@ -109,10 +108,9 @@ void Pluto::formation(){
     cout<<endl<<"(boo yah!)"<<endl;
     
     cout<<endl<<"********************"<<endl;
-    
-    
 }
 
+/////////////////////////////////////
 void Pluto::sweep_neighborhood_become_planet(){
     cout<<endl<<endl<<endl<<"ATTEMPTING TO SWEEP NEIGHBORHOOD CLEAN AND BECOME A PLANET///////////////"<<endl;
     if (solar_system) {
@@ -125,6 +123,7 @@ void Pluto::sweep_neighborhood_become_planet(){
     cout<<endl<<"********************"<<endl;
 }
 
+/////////////////////////////////////
 void Pluto::orbit(){
     cout<<endl<<endl<<endl<<"ORBIT////////////////"<<endl;
     if (solar_system) {
@@ -147,9 +146,9 @@ void Pluto::orbit(){
     }
     
     cout<<endl<<"********************"<<endl;
-    
 }
 
+/////////////////////////////////////
 void Pluto::temperature(){
     cout<<endl<<endl<<endl<<"TEMPERATURE//////////"<<endl;
     int low_temp=-400;
@@ -163,36 +162,48 @@ void Pluto::temperature(){
 
 void Pluto::atmosphere(){
     cout<<endl<<endl<<endl<<"ATMOSPHERE///////////"<<endl;
-    
-    
+    cout<<endl<<"pluto's atomosphere is made up of nitrogen, methane, and carbon_monoxide, and changes depending on the temperature."<<endl;
+    if (current_temp<-375) {
+        cout<<endl<<"currently the temperature is so low that pluto's atmosphere froze and fell to the surface as snow."<<endl;
+    }
     
     cout<<endl<<"********************"<<endl;
-    
 }
 
+/////////////////////////////////////
 void Pluto::materials(){
     cout<<endl<<endl<<endl<<"MATERIALS////////////"<<endl;
     
+    cout<<endl<<"pluto is made of about "<<rock*100<<"% rock and "<<ice*100<<"% ice."<<endl;
+    cout<<endl<<"the surface is frozen and continues to change as the temperature changes. it is comprised of mostly nitrogen ice, along with methane and carbon monoxide frost, with water ice underneath. there is potassium below the surface as well."<<endl;
     cout<<endl<<"pluto's mass is "<<mass()<<" kilograms"<<endl;
     cout<<endl<<"pluto's radius is "<<radius()/1000<<" kilometers (about "<<floor((radius()/1000)/1.6)<<" miles)"<<endl;
-    
+    cout<<endl<<"pluto's diameter is "<<diameter()/1000<<" kilometers (about "<<floor((diameter()/1000)/1.6)<<" miles)"<<endl;
+
     cout<<endl<<"********************"<<endl;
-    
 }
 
+/////////////////////////////////////
 void Pluto::ocean(){
     cout<<endl<<endl<<endl<<"OCEAN////////////////"<<endl;
-    
-    
+    srand(unsigned(time(NULL)));
+    float potassium = rand()%10;
+    if (potassium>6)
+        cout<<endl<<"potassium is radioactive, the heat from the radioactive decay has melted the water below the surface and created a vast subterranean ocean!"<<endl;
+    else
+        cout<<endl<<"potassium is radioactive, it could melt the water below the surface if there is enough of it."<<endl;
     
     cout<<endl<<"********************"<<endl;
-    
 }
 
-Pluto::Pluto(){
-}
+/////////////////////////////////////
+//constructor
+Pluto::Pluto(){}
 
 
+
+/////////////////////////////////////
+//main program
 int main(int argc, const char * argv[])
 {
     Pluto pluto=Pluto();
