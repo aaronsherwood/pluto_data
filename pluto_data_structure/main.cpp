@@ -8,6 +8,8 @@
 
 #include <iostream>
 #include <math.h>
+#include <iomanip>
+
 
 using namespace std;
 
@@ -98,7 +100,7 @@ void Pluto::formation(){
     }
     
     if (gravity&&protoplanetary_disk&&proto_star) {
-        cout<<endl<<"gravity in outer protoplanetary_disk blown by solar wind pulls gas and dust together forming pluto"<<endl;
+        cout<<endl<<"gravity in outer protoplanetary_disk pulls solar wind blown gas and dust together forming pluto"<<endl;
         solar_system=true;
     }
     
@@ -170,7 +172,7 @@ void Pluto::materials(){
     cout<<endl<<endl<<endl<<"MATERIALS////////////"<<endl;
     
     cout<<endl<<"pluto's mass is "<<mass()<<" kilograms"<<endl;
-    cout<<endl<<"pluto's radius is "<<radius()/1000<<" kilometers"<<endl;
+    cout<<endl<<"pluto's radius is "<<radius()/1000<<" kilometers (about "<<floor((radius()/1000)/1.6)<<" miles)"<<endl;
     
     cout<<endl<<"********************"<<endl;
     
