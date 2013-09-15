@@ -160,6 +160,7 @@ void Pluto::temperature(){
     cout<<endl<<"********************"<<endl;
 }
 
+/////////////////////////////////////
 void Pluto::atmosphere(){
     cout<<endl<<endl<<endl<<"ATMOSPHERE///////////"<<endl;
     cout<<endl<<"pluto's atomosphere is made up of nitrogen, methane, and carbon_monoxide, and changes depending on the temperature."<<endl;
