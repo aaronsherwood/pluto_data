@@ -206,7 +206,7 @@ int main(int argc, const char * argv[])
 {
     Pluto pluto=Pluto();
     pluto.formation();
-    pluto.sweep_neighborhood_become_planet();
+    pluto.clear_neighborhood_become_planet();
     pluto.orbit();
     pluto.temperature();
     pluto.atmosphere();
